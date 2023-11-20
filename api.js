@@ -5,9 +5,7 @@ const errorMsg = document.querySelector("error-msg");
 const dateInput = document.querySelector("#date-input");
 const submitButton = document.querySelector("#submit")
 
-
-// Taking the normal url of nasa api and adding the key to the specific
-const apiKey = "H4fJiZhQWJG1pVlVoVtdk9p6YIjsTj4W2bv8BcTh";
+import { apiKey } from "./file";
 const apodURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 // This function tries to fetch the url passed and if it does not work
