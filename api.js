@@ -36,15 +36,3 @@ function handleApodData(data) {
 
 // Fetching and displaying apod
 fetchData(apodURL, handleApodData);
-
-// Fetch and display rover images
-
-submitButton.addEventListener("click", function () {
-    roverList.innerHTML="Loading...";
-    const date = dateInput.value 
-    ? dateInput.value 
-    : new Date().toISOString().slice(0, 10);
-    const roverURL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${apiKey}`
-    fetchData(roverURL, handleRoverData);
-
-})
